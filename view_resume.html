@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Creator</title>
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Resume Builder</h1>
+        <section class="resume-builder">
+            <form class="inputField">
+                
+                <input type="text" name="name" placeholder="Syed Ahmed" title="Enter Your Name" required readonly>
+                <input type="text" name="title" placeholder="Flutter Developer" title="Enter Title/Sub Heading" required readonly>
+                <div class="section">
+                    <h2 class="left-align">Objective</h2>
+                    <input type="text" name="objective" placeholder="To secure a challenging position where I can apply my skills in software development and contribute to innovative projects." title="Enter Your Objective" required readonly>
+                </div>
+                <div class="section">
+                    <h2 class="left-align">work experience</h2>
+                    <textarea name="work_experience" placeholder="Software Developer at XYZ Corp. (2020 - Present) Developed and maintained web applications using modern technologies like React, Node.js, and MongoDB. Improved the performance and user experience of several applications." title="Enter Your Work Experience" required readonly></textarea>
+                </div>
+                <div class="section">
+                    <h2 class="left-align">Academic Details</h2>
+                    <textarea name="academic_details" placeholder="Bachelor of Science in Computer Science, ABC University (2016 - 2020) Graduated with honors, focusing on software engineering, algorithms, and databases." title="Enter Your Academic Details" required readonly></textarea>
+                </div> 
+                <div class="section">
+                    <h2 class="left-align">Skills</h2>
+                    <textarea name="skills" placeholder="JavaScript, React, Node.js, Python, HTML/CSS, SQL, MongoDB, Git, Agile methodologies, Problem-solving" title="Enter Your Skills" required readonly></textarea>
+                </div> 
+                <div class="section">
+                    <h2 class="left-align">Projects</h2>
+                    <textarea name="projects" placeholder="Project 1: Personal Portfolio Website: Developed a personal portfolio website to showcase projects and skills.
+Project 2: E-commerce Website: Built a e-commerce website with features like user authentication and shopping cart." title="Enter Your Projects" required readonly></textarea>
+               </div> 
+               <div class="section">
+                <h2 class="left-align">Achievements</h2>
+                <textarea name="achievements" placeholder="Winner of the XYZ Hackathon (2021)
+Contributed to an open-source project that gained over 1,000 stars on GitHub." title="Enter Your Achievements" required readonly></textarea>
+               </div> 
+               
+               <div class="section">
+                <h2 class="left-align">Contact</h2>
+                <textarea name="contact" placeholder="Email: ahmed@gmail.com | Phone: +92 313 123 1234
+LinkedIn: linkedin.com/in/Syed Ahmed |GitHub: github.com/Syed Ahmed" title="Enter Your Contact Information" required readonly></textarea>
+                </div> 
+                <a href="index.html" class="button">Back to Home</a>
+  
+            </form>
+        </section>
+        <div class="output_container"></div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+</html>

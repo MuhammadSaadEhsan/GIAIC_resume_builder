@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Creator</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="resume">
+        <div class="container">
+            <h1>Resume Creator</h1>
+            <section class="resume-builder">
+                <form class="inputField">
+                    <input type="text" name="name" placeholder="Your Name" title="Enter Your Name" required>
+                    <input type="text" name="title" placeholder="Title/Sub Heading" title="Enter Title/Sub Heading" required>
+                    <textarea name="work_experience" placeholder="Work Experience" title="Enter Your Work Experience" required></textarea>
+                    <textarea name="academic_details" placeholder="Academic Details" title="Enter Your Academic Details" required></textarea>
+                    <input type="text" name="objective" placeholder="Objective" title="Enter Your Objective" required>
+                    <textarea name="skills" placeholder="Skills" title="Enter Your Skills" required></textarea>
+                    <textarea name="projects" placeholder="Projects" title="Enter Your Projects" required></textarea>
+                    <textarea name="achievements" placeholder="Achievements" title="Enter Your Achievements" required></textarea>
+                    <textarea name="contact" placeholder="Contact Information" title="Enter Your Contact Information" required></textarea>
+                    <button type="button" class="button" onclick="generateResume()">Generate / Edit</button>
+                    <a href="index.html" class="button">Back to Home</a>
+                </form>
+            </section>
+            <div class="output_container"></div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</html>

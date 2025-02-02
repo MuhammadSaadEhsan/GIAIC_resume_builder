@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://th.bing.com/th/id/R.1e913f9a7a095331da5a69423b84445f?rik=u6AzUQk7VWvl5g&pid=ImgRaw&r=0');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    
+}
+
+.left-align {
+    text-align: left;
+    font-size: 1.4em;
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+
+.resume-builder{
+    margin-right: 20px;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.edit-button{
+    display: inline-block;
+    padding: 13px 50px;
+    background-color: #ff5722;  
+    color: white;
+    text-decoration: none;
+    font-size: 1.4em;
+    border-radius: 5px;
+    text-align: center;
+
+    transition: background-color 0.3s ease;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5722;  
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e64a19;  
+}
+
+
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2); color: white; border: 2px solid white; outline: none;
+}
+
+
+input:focus, textarea:focus {
+    border-color: #fff;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
