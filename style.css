@@ -39,6 +39,33 @@ input, textarea {
     color: white;
 }
 
+/* Container for the shareable link */
+#shareableLinkContainer {
+    display: none; /* Initially hidden */
+    border-radius: 8px;
+    padding: 5;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the shareable link */
+#shareableLink {
+    font-size: 16px;
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: bold;
+    word-wrap: break-word;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#shareableLink:hover {
+    color: #ff5722;
+    text-decoration: underline;
+}
+
+
 .edit-button{
     display: inline-block;
     padding: 13px 50px;
@@ -51,7 +78,18 @@ input, textarea {
 
     transition: background-color 0.3s ease;
 }
+.download-button{
+    display: inline-block;
+    padding: 13px 50px;
+    background-color: #ff5722;  
+    color: white;
+    text-decoration: none;
+    font-size: 1.4em;
+    border-radius: 5px;
+    text-align: center;
 
+    transition: background-color 0.3s ease;
+}
 .button {
     display: inline-block;
     padding: 10px 20px;

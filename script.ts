@@ -10,6 +10,39 @@ window.onload = function () {
     (document.querySelector('textarea[name="contact"]') as HTMLTextAreaElement).value = localStorage.getItem("contact") || "";
 };
 
+
+function printResume(){
+    const downloadPdf=document.getElementById("downloadpdf") as HTMLAnchorElement
+    downloadPdf?.addEventListener("click",()=>{
+         window.print();
+    })
+}
+
+async function generateResumeLink(): Promise<void> {
+    const username: string = (
+        document.querySelector('input[name="name"]') as HTMLInputElement
+    ).value.toLowerCase().replace(/\s+/g, "");
+
+    // Generate the shareable URL
+    const shareableURL = `${window.location.origin}?username=${encodeURIComponent(username)}`;
+    
+    // Get the container and link element
+    const shareableLinkContainer = document.getElementById('shareableLinkContainer') as HTMLElement;
+    const shareableLinkElement = document.getElementById('shareableLink') as HTMLAnchorElement;
+    
+    // Display the shareable link and update its content
+    shareableLinkContainer.style.display = 'block';
+    shareableLinkElement.href = shareableURL;
+    shareableLinkElement.textContent = shareableURL;
+
+    // Optionally, you can store the link in localStorage or a backend database
+    localStorage.setItem("resumeLink", shareableURL);
+
+}
+
+
+
+
 function generateResume(): void {
     const name = (document.querySelector('input[name="name"]') as HTMLInputElement).value;
     const title = (document.querySelector('input[name="title"]') as HTMLInputElement).value;
@@ -31,7 +64,7 @@ function generateResume(): void {
     localStorage.setItem("achievements", achievements);
     localStorage.setItem("contact", contact);
 
-    const resumeHTML: string = `
+    const resumeHTML: string =` 
         <!DOCTYPE html>
         <html lang="en">
         <head>
@@ -76,14 +109,23 @@ function generateResume(): void {
                             <h2 class="left-align">Contact</h2>
                             <textarea name="contact" placeholder="${contact}" readonly></textarea>
                         </div>
+                        <br/>
                         <a href="create_resume.html" class="edit-button">Edit</a>
-                        <a href="index.html" class="edit-button">Download</a>
+                        <button id="downloadpdf" type="button" class="download-button" onclick="printResume()">Download as pdf</button>
+                        <div id="shareableLinkContainer" style="display:none;">
+                        <p>Share your resume:</p>
+                        <a id="shareableLink" href="#" target="_blank">Your Resume Link</a>
+                       </div>
+                        <br/>
+                        <br/>
+                       <button id="downloadpdf" type="button" class="download-button" onclick="generateResumeLink()">Generate a Resume Link</button>
+
                     </form>
                 </section>
             </div>
         </body>
         </html>
-    `;
+    ;`
 
     const outputContainer = document.querySelector('.output_container') as HTMLElement;
     outputContainer.innerHTML = resumeHTML;
@@ -94,4 +136,3 @@ function generateResume(): void {
         newWindow.document.close();
     }
 }
-
