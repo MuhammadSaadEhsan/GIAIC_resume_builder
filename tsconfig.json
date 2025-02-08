@@ -6,7 +6,7 @@
 
     /* Modules */
     "module": "ESNext",                             /* Use ESNext module system for modern JavaScript modules. */
-    "moduleResolution": "node",                     /* Resolve modules using Node.js module resolution strategy. */
+    "moduleResolution": "node",   //saad                  /* Resolve modules using Node.js module resolution strategy. */
 
     /* Interop Constraints */
     "esModuleInterop": true,                        /* Emit extra code for CommonJS compatibility. */

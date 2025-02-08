@@ -1,3 +1,4 @@
+//code
 window.onload = function () {
     (document.querySelector('input[name="name"]') as HTMLInputElement).value = localStorage.getItem("name") || "";
     (document.querySelector('input[name="title"]') as HTMLInputElement).value = localStorage.getItem("title") || "";
